@@ -10,3 +10,16 @@ export const dropdown = () =>
         })
     })
 }
+
+export const selectDropDown = () => 
+{
+    const city = document.querySelector('.city'); 
+    const active = document.querySelector(".active");
+    city.addEventListener('click', (e) => 
+    {
+        let prev = active.textContent;
+        let next = e.target.textContent; 
+        e.target.textContent = prev;
+        active.textContent = next; 
+    })
+}
