@@ -17,7 +17,7 @@
 	grid-template-columns: 3fr 1.5fr;
 	height: 100vh;
 	width: 100%;
-	padding: 5rem; 	
+	padding: 5rem;
 }
 
 .left {
@@ -64,7 +64,7 @@
 	gap: 1rem;
 }
 
-.icons {
+.icons-left {
 	display: flex;
 	flex-direction: column;
 }
@@ -94,14 +94,8 @@
 	justify-content: space-around;
 }
 
-.monday,
-.tuesday,
-.wednesday,
-.thursday,
-.friday,
-.saturday,
-.sunday {
-	outline: 1px solid rgba(0, 0, 0, 0.151);
+.template-body {
+	width: 100px;
 	display: flex;
 	flex-direction: column;
 	padding: 1rem 1.5rem 1rem 1.5rem;
@@ -112,40 +106,31 @@
 	transition: transform 1s, outline 1s;
 }
 
-.monday:hover,
-.tuesday:hover,
-.wednesday:hover,
-.thursday:hover,
-.friday:hover,
-.saturday:hover,
-.sunday:hover {
+.template-body:hover
+{
 	transform: scale(1.25);
 	transform: translateY(-20%);
 	cursor: pointer;
 	outline: 1px solid black;
 }
 
-.monday .title,
-.tuesday .title,
-.wednesday .title,
-.thursday .title,
-.friday .title,
-.saturday .title,
-.sunday .title {
+.template-title
+{
 	font-size: 18px;
 	font-weight: 500;
 }
 
-.monday .degrees,
-.tuesday .degrees,
-.wednesday .degrees,
-.thursday .degrees,
-.friday .degrees,
-.saturday .degrees,
-.sunday .degrees {
+.template-degrees
+{
 	font-size: 24px;
 	font-weight: 500;
 	opacity: 0.7;
+}
+
+.template-desc
+{
+	display: flex; 
+	flex-direction: column;
 }
 
 /* Right Side */
@@ -162,10 +147,9 @@
 	text-align: center;
 }
 
-.right .time
-{
+.right .time {
 	font-size: 24px;
-	font-weight: 500; 
+	font-weight: 500;
 	text-align: center;
 }
 
@@ -197,8 +181,15 @@
 	font-size: 12px;
 }
 
+.condition {
+	font-size: 24px;
+	font-weight: 500;
+	opacity: 0.7;
+}
+
 .hourHeaderTitle {
 	font-size: 32px;
+	opacity: 0.8;
 }
 
 .hourly {
@@ -217,7 +208,7 @@
 }
 
 .hours .hour {
-	outline: 1px solid rgba(0, 0, 0, 0.151);
+	width: 96px; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -246,33 +237,28 @@
 }
 
 /* Drop Down*/
-.active
-{
-	font-size: 18px; 
-	font-weight: 500;
-	display: block; 
-}
-
-.inactive
-{
-	display: none; 
-}
-
-.active:hover
-{
-	cursor: pointer;
-}
-
-.city li
-{
-	list-style-type: none;
-	transition: font-size 0.5s, font-size 0.5s, font-weight 0.5s; 
-}
-
-.city li:hover
-{
-	cursor: pointer;
-	font-weight: 500;  
+.active {
 	font-size: 18px;
-	color: black; 
+	font-weight: 500;
+	display: block;
+}
+
+.inactive {
+	display: none;
+}
+
+.active:hover {
+	cursor: pointer;
+}
+
+.city li {
+	list-style-type: none;
+	transition: font-size 0.5s, font-size 0.5s, font-weight 0.5s;
+}
+
+.city li:hover {
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 18px;
+	color: black;
 }

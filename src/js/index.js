@@ -10,8 +10,6 @@ getTodaysDate();
 dropdown();
 selectDropDown();
 updateCurrentTime();
-getData();
-
 
 window.addEventListener('load', () => {
 	document.body.classList.remove('preload');
