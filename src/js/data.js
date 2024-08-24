@@ -1,10 +1,11 @@
 import { format, addDays, addHours } from 'date-fns';
+import key from '../keys.js';
 
 export async function getData(city) {
 	const url =
 		'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' +
 		city +
-		'?key=LYMM5URNJZ8F68TLBNEEVSG3J';
+		key;
 	try {
 		const response = await fetch(url);
 		const json = await response.json();
